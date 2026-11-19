@@ -50,8 +50,8 @@ Puedes descargar la versión compilada y lista para instalar directamente desde:
 ### Instrucciones
 1. Clona el repositorio:
    ```bash
-   git clone git@github.com:Spartan117x/ferdium-android.git
-   cd ferdium-android
+   git clone git@github.com:Spartan117x/ferdium-android-landscape.git
+   cd ferdium-android-landscape
    ```
 2. Ejecuta el script de compilación:
    ```bash
