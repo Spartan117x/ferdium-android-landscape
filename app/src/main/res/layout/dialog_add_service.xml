@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#161622"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Añadir nueva ventana o cuenta"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crea una ventana con sesión y cookies aisladas (ej. otro WhatsApp)."
+            android:textColor="#9CA3AF"
+            android:textSize="10.5sp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- PRESETS DE SERVICIOS (SCROLL HORIZONTAL) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecciona el servicio:"
+            android:textColor="#D1D5DB"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:id="@+id/layoutPresetChips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <!-- NOMBRE Y MONOGRAMA EN FILA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:layout_marginEnd="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre de la ventana:"
+                    android:textColor="#9CA3AF"
+                    android:textSize="10sp" />
+
+                <EditText
+                    android:id="@+id/etServiceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="#26263A"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:hint="Ej. WhatsApp 2"
+                    android:textColorHint="#6B7280"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monograma:"
+                    android:textColor="#9CA3AF"
+                    android:textSize="10sp" />
+
+                <EditText
+                    android:id="@+id/etServiceMonogram"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="#26263A"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:hint="W2"
+                    android:maxLength="4"
+                    android:textColorHint="#6B7280"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- URL DEL SERVICIO -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="URL de la página:"
+            android:textColor="#9CA3AF"
+            android:textSize="10sp" />
+
+        <EditText
+            android:id="@+id/etServiceUrl"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="#26263A"
+            android:textColor="#FFFFFF"
+            android:textSize="11.5sp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:hint="https://web.whatsapp.com"
+            android:textColorHint="#6B7280"
+            android:singleLine="true"
+            android:layout_marginBottom="8dp" />
+
+        <!-- OPCIONES ADICIONALES -->
+        <CheckBox
+            android:id="@+id/cbDesktopMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cargar como versión de escritorio (PC)"
+            android:textColor="#E5E7EB"
+            android:textSize="11sp"
+            android:buttonTint="#7C3AED"
+            android:layout_marginBottom="12dp" />
+
+        <!-- BOTONES DE ACCIÓN -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btnCancelAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Cancelar"
+                android:textColor="#9CA3AF"
+                android:background="#2A2A3C"
+                android:textSize="11sp"
+                android:layout_marginEnd="8dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+
+            <Button
+                android:id="@+id/btnConfirmAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="＋ Añadir Ventana"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:background="#7C3AED"
+                android:textSize="11sp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,21 @@
+# Build artifacts
+build/
+.build_cache/
+*.idsig
+*.log
+
+# Root generated APK (keep release/ folder tracked)
+/ferdium-landscape.apk
+
+# Keystores & sensitive credentials
+*.keystore
+*.jks
+credentials*.txt
+
+# IDE & Editor files
+.idea/
+*.iml
+.gradle/
+local.properties
+.DS_Store
+Thumbs.db
